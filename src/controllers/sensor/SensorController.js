@@ -13,8 +13,6 @@ const current = new Date();
 const Sensor = require('../../models/Sensor');
 
 module.exports = {
-
-
   async index(request, response) {
     const sensores = await Sensor.find();
 
@@ -66,7 +64,7 @@ module.exports = {
       ipArduino,
     } = request.body;
 
-    sensores = await Sensor.create({
+    const sensores = await Sensor.create({
       user_id,
       tipoMedida1,
       tipoMedida2,
@@ -80,6 +78,4 @@ module.exports = {
 
     return response.json({ sensores });
   },
-
-
 };

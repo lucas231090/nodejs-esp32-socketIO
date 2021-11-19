@@ -22,9 +22,9 @@ mongoose.connect(process.env.MONGO_URL, {
 });
 
 app.get('/', (request, response) => {
-  const sv = server;
+  const sv = server.connections;
 
-  response.send(sv);
+  response.json({ conexões: sv });
 });
 
 app.use(express.json());
