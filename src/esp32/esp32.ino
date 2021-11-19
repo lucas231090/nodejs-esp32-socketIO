@@ -13,7 +13,7 @@ const char* server_host = "192.168.25.13"; // IP do servidor websocket
 const int server_port = 3333; // Porta de conexão do servidor
 
 // Led
-const int led = 23; // porta D32 esp32
+const int led = 23; // porta d23 esp32
 
 void socketIOEvent(socketIOmessageType_t type, uint8_t * payload, size_t length) {
     switch(type) {
